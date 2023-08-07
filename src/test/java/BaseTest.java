@@ -4,21 +4,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class BaseTest {
-
-    @Test
-    public void goToWebsite() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://demoqa.com/");
+    WebDriver driver;
+    @BeforeMethod
+    public void setup() {
+        this.driver = new ChromeDriver();
+        this.driver.get("https://demoqa.com/");
+        this.driver.manage().window().maximize();
     }
 
     @Test
     public void logInTest() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://demoqa.com/");
-        driver.manage().window().maximize();
         Thread.sleep(1000);
         WebElement element = driver.findElement(By.xpath("//h5[contains(text(),'Book Store Application')]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
