@@ -11,7 +11,7 @@ public class BaseTest {
         this.driver = new ChromeDriver();
         this.driver.get("https://demoqa.com/");
         this.driver.manage().window().maximize();
-        this.homePage = new HomePage();
+        this.homePage = new HomePage(driver);
     }
 
     @AfterMethod

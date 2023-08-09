@@ -14,22 +14,22 @@ public class LoginTest extends BaseTest {
     @Override
     public void setup() {
         super.setup();
-        this.loginPage = new LoginPage();
-        this.bookStorePage = new BookStorePage();
+        this.loginPage = new LoginPage(driver);
+        this.bookStorePage = new BookStorePage(driver);
     }
 
     @Test
     public void logInTest() {
         Utils.waitInSeconds(1);
-        WebElement element = driver.findElement(By.xpath("//h5[contains(text(),'Book Store Application')]"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        homePage.scrollDown();
+        Utils.waitInSeconds(1);
         homePage.bookStoreClick();
         Utils.waitInSeconds(1);
         bookStorePage.clickLoginButton();
         Utils.waitInSeconds(1);
         loginPage.inputValidCredentials();
         loginPage.clickLoginButton();
-        Utils.waitInSeconds(1);
+        Utils.waitInSeconds(2);
         String actual = bookStorePage.getNameText();
         String expected = Constants.EXPECTED_NAME;
         Assert.assertEquals(actual, expected);
