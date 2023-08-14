@@ -13,12 +13,32 @@ public class BookStoreTest extends BaseTest{
     }
 
     @Test
-    public void getBooksTitles() {
+    public void printBooksTitlesTest() {
         Utils.waitInSeconds(1);
         homePage.scrollDown();
         Utils.waitInSeconds(1);
         homePage.clickBookStore();
         Utils.waitInSeconds(1);
-        bookStorePage.printBookTitle();
+        bookStorePage.printBooksTitles();
+    }
+
+    @Test
+    public void printBooksAuthorsTest() {
+        Utils.waitInSeconds(1);
+        homePage.scrollDown();
+        Utils.waitInSeconds(1);
+        homePage.clickBookStore();
+        Utils.waitInSeconds(1);
+        bookStorePage.printBooksAuthors();
+    }
+
+    @Test
+    public void printBooksPublishersTest() {
+        Utils.waitInSeconds(1);
+        homePage.scrollDown();
+        Utils.waitInSeconds(1);
+        homePage.clickBookStore();
+        Utils.waitInSeconds(1);
+        bookStorePage.printBooksPublisher();
     }
 }
