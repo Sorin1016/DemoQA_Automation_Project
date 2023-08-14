@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
         Utils.waitInSeconds(1);
         homePage.scrollDown();
         Utils.waitInSeconds(1);
-        homePage.bookStoreClick();
+        homePage.clickBookStore();
         Utils.waitInSeconds(1);
         bookStorePage.clickLoginButton();
         Utils.waitInSeconds(1);

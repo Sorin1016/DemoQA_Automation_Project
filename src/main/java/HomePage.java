@@ -16,7 +16,7 @@ public class HomePage extends BasePage {
     @FindBy(css = ".rt-tr-group")
     List<WebElement> booklist;
 
-    public void bookStoreClick() {
+    public void clickBookStore() {
         this.bookStoreAplicationButton.click();
     }
 
