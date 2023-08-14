@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest {
     protected WebDriver driver;
     protected HomePage homePage;
+
     @BeforeMethod
     public void setup() {
         this.driver = new ChromeDriver();
