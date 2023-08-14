@@ -12,7 +12,7 @@ public class BookStoreTest extends BaseTest{
         this.bookStorePage = new BookStorePage(driver);
     }
 
-    @Test
+    @Test(priority = 2)
     public void printBooksTitlesTest() {
         Utils.waitInSeconds(1);
         homePage.scrollDown();
@@ -22,7 +22,7 @@ public class BookStoreTest extends BaseTest{
         bookStorePage.printBooksTitles();
     }
 
-    @Test
+    @Test(priority = 3)
     public void printBooksAuthorsTest() {
         Utils.waitInSeconds(1);
         homePage.scrollDown();
@@ -32,7 +32,7 @@ public class BookStoreTest extends BaseTest{
         bookStorePage.printBooksAuthors();
     }
 
-    @Test
+    @Test(priority = 4)
     public void printBooksPublishersTest() {
         Utils.waitInSeconds(1);
         homePage.scrollDown();

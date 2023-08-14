@@ -15,7 +15,7 @@ public class BooksTest extends BaseTest{
         this.bookStorePage = new BookStorePage(driver);
     }
 
-    @Test
+    @Test(priority = 5)
     public void verifyBooksListTest() {
         Utils.waitInSeconds(1);
         homePage.scrollDown();
