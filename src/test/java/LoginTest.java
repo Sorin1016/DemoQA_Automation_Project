@@ -15,7 +15,7 @@ public class LoginTest extends BaseTest {
         this.bookStorePage = new BookStorePage(driver);
     }
 
-    @Test
+    @Test(priority = 1)
     public void logInTest() {
         Utils.waitInSeconds(1);
         homePage.scrollDown();

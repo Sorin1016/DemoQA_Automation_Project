@@ -12,13 +12,33 @@ public class BookStoreTest extends BaseTest{
         this.bookStorePage = new BookStorePage(driver);
     }
 
-    @Test
-    public void getBooksTitles() {
+    @Test(priority = 2)
+    public void printBooksTitlesTest() {
         Utils.waitInSeconds(1);
         homePage.scrollDown();
         Utils.waitInSeconds(1);
         homePage.clickBookStore();
         Utils.waitInSeconds(1);
-        bookStorePage.printBookTitle();
+        bookStorePage.printBooksTitles();
+    }
+
+    @Test(priority = 3)
+    public void printBooksAuthorsTest() {
+        Utils.waitInSeconds(1);
+        homePage.scrollDown();
+        Utils.waitInSeconds(1);
+        homePage.clickBookStore();
+        Utils.waitInSeconds(1);
+        bookStorePage.printBooksAuthors();
+    }
+
+    @Test(priority = 4)
+    public void printBooksPublishersTest() {
+        Utils.waitInSeconds(1);
+        homePage.scrollDown();
+        Utils.waitInSeconds(1);
+        homePage.clickBookStore();
+        Utils.waitInSeconds(1);
+        bookStorePage.printBooksPublisher();
     }
 }
