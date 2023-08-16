@@ -21,17 +21,26 @@ public class BookStorePage extends BasePage {
     @FindBy(xpath = "(//div[@class='rt-td'])")
     private List<WebElement> booksRows;
 
+    @FindBy(css = "span[id='see-book-Git Pocket Guide']")
+    private WebElement gitPocketGuideBook;
+
+    @FindBy(css = "span[id='see-book-Eloquent JavaScript, Second Edition']")
+    private WebElement eloquentJavaScripBook;
+
+    @FindBy(css = "span[id='see-book-Speaking JavaScript']")
+    private WebElement speakingJavaScriptBook;
+
     public void clickLoginButton() {
-        this.loginButton.click();
+        clickElement(this.loginButton);
     }
 
     public String getNameText() {
-        return this.userNameValue.getText();
+        return getText(this.userNameValue);
     }
 
     public void printBooksTitles() {
         for (WebElement element : booksTitles) {
-            System.out.println(element.getText());
+            System.out.println(getText(element));
         }
     }
 
@@ -49,5 +58,25 @@ public class BookStorePage extends BasePage {
                 System.out.println(booksRows.get(i).getText());
             }
         }
+    }
+
+    public void clickGitPocketGuideBookField() {
+        clickElement(this.gitPocketGuideBook);
+    }
+
+    public void clickEloquentJavaScripBookField() {
+        clickElement(this.eloquentJavaScripBook);
+    }
+
+    public void scrollToEloquentJavaScripBook() {
+        scrollToElement(this.eloquentJavaScripBook);
+    }
+
+    public void scrollToSpeakingJavaScriptBook() {
+        scrollToElement(this.speakingJavaScriptBook);
+    }
+
+    public void clickSpeakingJavaScriptBook() {
+        clickElement(this.speakingJavaScriptBook);
     }
 }
