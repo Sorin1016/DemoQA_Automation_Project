@@ -6,6 +6,7 @@
             <class name="BooksTest" />
             <class name="BookStoreTest" />
             <class name="LoginTest" />
+            <class name="EndToEndTest" />
         </classes>
     </test>
 </suite>

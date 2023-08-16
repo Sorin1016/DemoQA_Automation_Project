@@ -15,8 +15,11 @@ public class HomePage extends BasePage {
     @FindBy(css = ".rt-tr-group")
     List<WebElement> booklist;
 
+    @FindBy(xpath = "(//li[@id='item-3'])[5]")
+    private WebElement profileButton;
+
     public void clickBookStore() {
-        this.bookStoreAplicationButton.click();
+        clickElement(this.bookStoreAplicationButton);
     }
 
     public void scrollDown() {
@@ -30,5 +33,13 @@ public class HomePage extends BasePage {
                 System.out.println("------------------------------------");
             }
         }
+    }
+
+    public void scrollToProfileButton() {
+        scrollToElement(this.profileButton);
+    }
+
+    public void clickProfileButton() {
+        clickElement(this.profileButton);
     }
 }
