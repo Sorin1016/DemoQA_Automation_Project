@@ -4,10 +4,10 @@ import org.testng.annotations.Test;
 
 public class EndToEndTest extends BaseTest{
 
-    protected LoginPage loginPage;
-    protected BookStorePage bookStorePage;
-    protected BooksPage booksPage;
-    protected ProfilePage profilePage;
+    private LoginPage loginPage;
+    private BookStorePage bookStorePage;
+    private BooksPage booksPage;
+    private ProfilePage profilePage;
 
     @BeforeMethod
     @Override
