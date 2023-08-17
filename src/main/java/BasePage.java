@@ -14,20 +14,4 @@ public class BasePage {
     public void scrollToElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
-
-    protected void clickElement(WebElement element) {
-        element.click();
-    }
-
-    protected void inputText(WebElement element, String text) {
-        element.sendKeys(text);
-    }
-
-    protected String getText(WebElement element) {
-        return element.getText();
-    }
-
-    protected boolean isDisplayed(WebElement element) {
-        return element.isDisplayed();
-    }
 }

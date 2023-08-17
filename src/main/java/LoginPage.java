@@ -18,19 +18,12 @@ public class LoginPage extends BasePage {
     @FindBy(css = "#login")
     private WebElement loginButton;
 
-    @FindBy(xpath = "//h5")
-    private WebElement loginMessage;
-
     public void inputValidCredentials() {
-        inputText(this.username, Constants.USERNAME);
-        inputText(this.password, Constants.PASSWORD);
+        this.username.sendKeys(Constants.USERNAME);
+        this.password.sendKeys(Constants.PASSWORD);
     }
 
     public void clickLoginButton() {
-        clickElement(this.loginButton);
-    }
-
-    public boolean isDisplayedLoginText() {
-        return isDisplayed(this.loginMessage);
+        this.loginButton.click();
     }
 }
