@@ -18,6 +18,12 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "(//li[@id='item-3'])[5]")
     private WebElement profileButton;
 
+    @FindBy(xpath = "//*[@id='app']/header/a/img")
+    private WebElement pageTitle;
+
+    @FindBy(css = "#app > div > div > div.pattern-backgound.playgound-header")
+    private WebElement subTitle;
+
     public void clickBookStore() {
         clickElement(this.bookStoreAplicationButton);
     }
@@ -41,5 +47,14 @@ public class HomePage extends BasePage {
 
     public void clickProfileButton() {
         clickElement(this.profileButton);
+    }
+
+    public boolean isTitlePresent() {
+        return isDisplayed(this.pageTitle);
+    }
+
+    public boolean isSubTitlePresent() {
+        return isDisplayed(this.subTitle)
+                && subTitle.getText().equalsIgnoreCase("Book Store");
     }
 }
