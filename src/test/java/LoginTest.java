@@ -17,11 +17,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 1)
     public void logInTest() {
-        Utils.waitInSeconds(1);
-        homePage.scrollDown();
-        Utils.waitInSeconds(1);
-        homePage.clickBookStore();
-        Utils.waitInSeconds(1);
+        homePage.arriveToBookStorePage();
         bookStorePage.clickLoginButton();
         Utils.waitInSeconds(1);
         loginPage.inputValidCredentials();
