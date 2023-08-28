@@ -17,11 +17,7 @@ public class BooksTest extends BaseTest{
 
     @Test(priority = 5)
     public void verifyBooksListTest() {
-        Utils.waitInSeconds(1);
-        homePage.scrollDown();
-        Utils.waitInSeconds(1);
-        homePage.clickBookStore();
-        Utils.waitInSeconds(1);
+        homePage.arriveToBookStorePage();
         bookStorePage.clickLoginButton();
         Utils.waitInSeconds(1);
         loginPage.inputValidCredentials();
@@ -31,5 +27,29 @@ public class BooksTest extends BaseTest{
         String expected = Constants.EXPECTED_NAME;
         Assert.assertEquals(actual, expected);
         homePage.printAllBooks();
+    }
+
+    @Test(priority = 10)
+    public void printAuthorAndPublisherByBookNamePositiveTest() {
+        homePage.arriveToBookStorePage();
+        bookStorePage.printAuthorAndPublisherIfBookIsPresent("Understanding ECMAScript 6");
+    }
+
+    @Test(priority = 11)
+    public void printAuthorAndPublisherByBookNameNegativeTest() {
+        homePage.arriveToBookStorePage();
+        bookStorePage.printAuthorAndPublisherIfBookIsPresent("Harry Potter");
+    }
+
+    @Test(priority = 12)
+    public void printBookTitleByIndexTest() {
+        homePage.arriveToBookStorePage();
+        bookStorePage.printBookTitleByIndex(2);
+    }
+
+    @Test(priority = 13)
+    public void printBookAuthorByIndexTest() {
+        homePage.arriveToBookStorePage();
+        bookStorePage.printBookAuthorByIndex(8);
     }
 }

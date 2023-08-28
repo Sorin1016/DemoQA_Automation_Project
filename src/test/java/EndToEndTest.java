@@ -21,11 +21,7 @@ public class EndToEndTest extends BaseTest{
 
     @Test
     public void endToEndFlowTest() {
-        Utils.waitInSeconds(1);
-        homePage.scrollDown();
-        Utils.waitInSeconds(1);
-        homePage.clickBookStore();
-        Utils.waitInSeconds(1);
+        homePage.arriveToBookStorePage();
         bookStorePage.clickLoginButton();
         Utils.waitInSeconds(1);
         loginPage.inputValidCredentials();

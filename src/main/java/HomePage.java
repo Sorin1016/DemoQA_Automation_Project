@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import java.util.List;
 
 public class HomePage extends BasePage {
@@ -10,7 +11,7 @@ public class HomePage extends BasePage {
     }
 
     @FindBy(xpath = "//h5[contains(text(),'Book Store Application')]")
-    private WebElement bookStoreAplicationButton;
+    private WebElement bookStoreApplicationButton;
 
     @FindBy(css = ".rt-tr-group")
     List<WebElement> booklist;
@@ -18,12 +19,15 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "(//li[@id='item-3'])[5]")
     private WebElement profileButton;
 
+    @FindBy(xpath = "//*[@id='app']/header/a/img")
+    private WebElement pageTitle;
+
     public void clickBookStore() {
-        clickElement(this.bookStoreAplicationButton);
+        clickElement(this.bookStoreApplicationButton);
     }
 
     public void scrollDown() {
-        scrollToElement(this.bookStoreAplicationButton);
+        scrollToElement(this.bookStoreApplicationButton);
     }
 
     public void printAllBooks() {
@@ -41,5 +45,17 @@ public class HomePage extends BasePage {
 
     public void clickProfileButton() {
         clickElement(this.profileButton);
+    }
+
+    public boolean isTitlePresent() {
+        return isDisplayed(this.pageTitle);
+    }
+
+    public void arriveToBookStorePage() {
+        Utils.waitInSeconds(1);
+        scrollDown();
+        Utils.waitInSeconds(1);
+        clickBookStore();
+        Utils.waitInSeconds(1);
     }
 }
