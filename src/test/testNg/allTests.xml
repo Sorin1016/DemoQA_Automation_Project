@@ -3,10 +3,20 @@
 <suite name="All Tests" verbose="1" >
     <test name="All Tests" >
         <classes>
-            <class name="BooksTest" />
-            <class name="BookStoreTest" />
-            <class name="LoginTest" />
-            <class name="EndToEndTest" />
+            <class name="tests.AccordionTest" />
+            <class name="tests.AlertsPageTest" />
+            <class name="tests.AutoCompleteTest" />
+            <class name="tests.BooksTest" />
+            <class name="tests.BookStoreTest" />
+            <class name="tests.BrowserWindowsTest" />
+            <class name="tests.ButtonsTest" />
+            <class name="tests.CheckBoxTest" />
+            <class name="tests.EndToEndTest" />
+            <class name="tests.LoginTest" />
+            <class name="tests.ProgressBarTest" />
+            <class name="tests.SliderTest" />
+            <class name="tests.ToolTipsTest" />
+            <class name="tests.WebTablesTest" />
         </classes>
     </test>
 </suite>

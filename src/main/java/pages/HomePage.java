@@ -1,6 +1,10 @@
+package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.base_page.BasePage;
+import utils.Utils;
 
 import java.util.List;
 
@@ -22,11 +26,45 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id='app']/header/a/img")
     private WebElement pageTitle;
 
+
+    @FindBy(xpath = "(//div[@class='card-body'])[1]")
+    private WebElement elementsButton;
+
+    @FindBy(xpath = "(//div[@class='card-body'])[3]")
+    private WebElement alertsFrameWindowsButton;
+
+    @FindBy(xpath = "(//div[@class='card mt-4 top-card'])[4]")
+    private WebElement widgetsButton;
+
+    public void clickWidgetsButton() {
+        clickElement(this.widgetsButton);
+    }
+
+    public void scrollToWidgetsButton() {
+        scrollToElement(this.widgetsButton);
+    }
+
+    public void clickElementsButton() {
+        clickElement(this.elementsButton);
+    }
+
+    public void clickAlertsFrameWindowsButton() {
+        clickElement(this.alertsFrameWindowsButton);
+    }
+
+    public void scrollToAlertsFrameWindowsButton() {
+        scrollToElement(this.alertsFrameWindowsButton);
+    }
+
+    public void scrollToElementsButton() {
+        scrollToElement(this.elementsButton);
+    }
+
     public void clickBookStore() {
         clickElement(this.bookStoreApplicationButton);
     }
 
-    public void scrollDown() {
+    public void scrollToBookStoreApplicationButton() {
         scrollToElement(this.bookStoreApplicationButton);
     }
 
@@ -53,7 +91,7 @@ public class HomePage extends BasePage {
 
     public void arriveToBookStorePage() {
         Utils.waitInSeconds(1);
-        scrollDown();
+        scrollToBookStoreApplicationButton();
         Utils.waitInSeconds(1);
         clickBookStore();
         Utils.waitInSeconds(1);

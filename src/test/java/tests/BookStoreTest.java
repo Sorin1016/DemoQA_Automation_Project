@@ -1,7 +1,11 @@
+package tests;
+
+import constants.Constants;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import pages.book_store_application_page.BookStorePage;
 
 public class BookStoreTest extends BaseTest{
 
