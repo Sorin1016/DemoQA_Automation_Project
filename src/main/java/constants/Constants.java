@@ -1,3 +1,5 @@
+package constants;
+
 public class Constants {
 
     public static final String USERNAME = "SorinMihai";
@@ -14,4 +16,5 @@ public class Constants {
     public static final String AUTHOR_WORD = "Author word is not present.";
     public static final String PUBLISHER_WORD = "Publisher word is not present.";
     public static final String MENU_BUTTONS = "Check the number of the menu buttons.";
+    public static final String SALARY = "5780";
 }

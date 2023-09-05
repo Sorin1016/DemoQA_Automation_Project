@@ -1,4 +1,8 @@
+package utils;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class Utils {
 
@@ -16,5 +20,9 @@ public class Utils {
 
     public static void acceptAlert(WebDriver driver) {
         driver.switchTo().alert().accept();
+    }
+
+    public static void dismissAlert(WebDriver driver) {
+        driver.switchTo().alert().dismiss();
     }
 }

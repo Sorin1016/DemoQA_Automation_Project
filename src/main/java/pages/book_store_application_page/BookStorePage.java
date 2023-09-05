@@ -1,6 +1,9 @@
+package pages.book_store_application_page;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.base_page.BasePage;
 
 import java.util.*;
 
@@ -140,15 +143,6 @@ public class BookStorePage extends BasePage {
     public boolean isSubTitlePresent() {
         return isDisplayed(this.subTitle)
                 && subTitle.getText().equalsIgnoreCase("Book Store");
-    }
-
-    public boolean verifyBookIsPresent(String bookTitle) {
-        for (WebElement element : booklist) {
-            if (element.getText().equalsIgnoreCase(bookTitle)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public void printAuthorAndPublisherIfBookIsPresent(String bookTitle) {

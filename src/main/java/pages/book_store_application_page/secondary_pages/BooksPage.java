@@ -1,8 +1,11 @@
+package pages.book_store_application_page.secondary_pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.base_page.BasePage;
 
-public class BooksPage extends BasePage{
+public class BooksPage extends BasePage {
     public BooksPage(WebDriver driver) {
         super(driver);
     }

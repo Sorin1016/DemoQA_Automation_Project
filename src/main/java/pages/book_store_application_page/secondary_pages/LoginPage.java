@@ -1,6 +1,10 @@
+package pages.book_store_application_page.secondary_pages;
+
+import constants.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.base_page.BasePage;
 
 public class LoginPage extends BasePage {
 
